@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body class="container">
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h1>This is Great</h1>
+            <p>Welcome to template using EJS</p>
+
+            <h2>Variable</h2>
+            <p>
+                <%= data.tagline %>
+            </p>
+
+            <ul>
+                <% data.mascot.forEach(function(mascot){ %>
+                    <li>
+                        <strong>
+                            <%= mascot.name %>
+                        </strong>
+                        reprisenting <%= mascot.organization %>
+                            born <%= mascot.birth %>
+                    </li>
+                    <% })%>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+
+</html>
